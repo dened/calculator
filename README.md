@@ -4,7 +4,7 @@ It's a test application
 
 ## Goals
 
-* [ ] Expression-parsing module
+* [x] Expression-parsing module
 * [ ] Unit test
 * [ ] Wolfram alpha API
 * [ ] Chart
