@@ -3,9 +3,9 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 class ChartData {
-  double horizontalInterval = 10;
+  double horizontalInterval = 15;
 
-  double verticalInterval = 10;
+  double verticalInterval = 15;
 
   Color gridColor = Colors.grey;
   double gridStrokeWidth = 0.5;

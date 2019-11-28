@@ -31,8 +31,12 @@ class ChartPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-
-
+    if(data.maxX == 0) {
+      data.maxX = size.width;
+    }
+    if (data.maxY == 0) {
+      data.maxY = size.height;
+    }
 
     drawBackground(canvas, size);
     drawGrid(canvas, size);
@@ -90,8 +94,6 @@ class ChartPainter extends CustomPainter {
 
   /// This function draws a colored background behind the chart.
   void drawBackground(Canvas canvas, Size viewSize) {
-
-
     final Size usableViewSize = getChartUsableDrawSize(viewSize);
     backgroundPaint.color = _chartStyle.backgroundColor;
     canvas.drawRect(
@@ -152,9 +154,10 @@ class ChartPainter extends CustomPainter {
             Offset(x2, y2),
             gridPaint,
           );
+          horizontalSeek += data.horizontalInterval;
         }
 
-        horizontalSeek += data.horizontalInterval;
+
 //      }
 //    }
   }

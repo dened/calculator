@@ -105,7 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void _calculate(String expression) async {
     Calculator calculator = LocalCalculator();
 
-    pointList = await calculator.calculate(expression, -10, 10);
+    pointList = await calculator.calculate(expression, 0, 100);
     setState(() {});
   }
 }
